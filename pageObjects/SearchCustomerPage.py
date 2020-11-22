@@ -1,13 +1,10 @@
 class SearchCustomer():
-    # Add customer Page
-    labelSearch_xpath = "//label[contains(text(),'Search:')]"
-
+    # Search customer Name\Email
+    labelSearch_xpath = "//label[contains(text(),'Search:')]/input"
     tblSearchResults_xpath="//table[@id='DataTables_Table_0']"
-    table_xpath="//table[@id='customers-grid']"
-    tableRows_xpath="//table[@id='customers-grid']//tbody/tr"
     tableRows_xpath="//tbody/tr"
-    tableColumns_xpath="//table[@id='customers-grid']//tbody/tr/td"
     tableColumns_xpath="//tbody/tr/td"
+
 
     def __init__(self, driver):
         self.driver = driver
@@ -25,8 +22,8 @@ class SearchCustomer():
     def searchCustomerByEmail(self,email):
         flag=False
         for r in range(1,self.getNoOfRows()+1):
-          table=self.driver.find_element_by_xpath(self.table_xpath)
-          emailid=table.find_element_by_xpath("//table[@id='customers-grid']/tbody/tr["+str(r)+"]/td[2]").text
+          table=self.driver.find_element_by_xpath(self.tblSearchResults_xpath)
+          emailid=table.find_element_by_xpath("//table[@id='DataTables_Table_0']/tbody/tr["+str(r)+"]/td[5]").text
           if emailid == email:
               flag = True
               break
@@ -35,8 +32,8 @@ class SearchCustomer():
     def searchCustomerByName(self,Name):
         flag=False
         for r in range(1,self.getNoOfRows()+1):
-          table=self.driver.find_element_by_xpath(self.table_xpath)
-          name=table.find_element_by_xpath("//table[@id='customers-grid']/tbody/tr["+str(r)+"]/td[3]").text
+          table=self.driver.find_element_by_xpath(self.tblSearchResults_xpath)
+          name=table.find_element_by_xpath("//table[@id='DataTables_Table_0']/tbody/tr["+str(r)+"]/td[3]").text
           if name == Name:
               flag = True
               break

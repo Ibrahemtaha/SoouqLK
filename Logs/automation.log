@@ -1,6 +1,5 @@
-11/21/2020 10:07:14 AM: INFO: ************* Test_003_AddCustomer **********
-11/21/2020 10:07:23 AM: INFO: ************* Login succesful **********
-11/21/2020 10:07:23 AM: INFO: ******* Starting Add Customer Test **********
-11/21/2020 10:07:27 AM: INFO: ************* Providing customer info **********
-11/21/2020 10:07:30 AM: INFO: ********* Add customer Test Passed *********
-11/21/2020 10:07:30 AM: INFO: ******* Ending Add customer test **********
+11/22/2020 09:14:19 AM: INFO: ************* SearchCustomerByEmail_004 **********
+11/22/2020 09:14:28 AM: INFO: ************* Login succesful **********
+11/22/2020 09:14:28 AM: INFO: ******* Starting Search Customer By Email **********
+11/22/2020 09:14:30 AM: INFO: ************* searching customer by emailID **********
+11/22/2020 09:14:35 AM: INFO: ***************  TC_SearchCustomerByEmail_004 Finished  *********** 
